@@ -1,0 +1,20 @@
+.container{
+    height: 12vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.icon{
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color:grey;
+    font-size:0.1rem;
+}
+
+.container p{
+    margin-top:0.5vh;
+}

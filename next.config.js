@@ -4,4 +4,7 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+const withTM = require('next-transpile-modules')([
+  'antd-mobile'
+]);
+module.exports = withTM(nextConfig)
