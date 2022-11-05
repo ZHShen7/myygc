@@ -8,13 +8,20 @@
 }
 
 .icon{
+    width: 100%;
+    color:grey;
+    font-size:0.1rem;
     align-self: center;
     justify-self: center;
     text-align: center;
-    color:grey;
-    font-size:0.1rem;
 }
 
 .container p{
     margin-top:0.5vh;
+}
+
+.link{
+    text-decoration: none;
+    display: grid;
+    
 }

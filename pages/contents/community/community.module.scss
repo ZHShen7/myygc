@@ -1,0 +1,258 @@
+.container {
+
+    .title {
+        font-size: .2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: .3rem .3rem .2rem .2rem;
+        color: rgba($color: #fff, $alpha: .8);
+        font-weight: 500;
+
+        .titleAddIcon {
+            position: absolute;
+            right: 0;
+            font-size: .26rem;
+        }
+    }
+
+    .search {
+        background: #38423a;
+        margin: 0 .1rem;
+        border-radius: .1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: .5rem;
+
+        .search-icon {
+            font-size: .28rem;
+            margin-left: .2rem;
+        }
+
+        input {
+            flex: 1;
+            text-indent: .1rem;
+            font-size: .19rem;
+            border: none;
+            height: 100%;
+            background: transparent;
+            outline: none;
+            color: rgba($color: #fff, $alpha: .8);
+        }
+    }
+
+    .hot {
+        margin: .35rem .3rem;
+    }
+
+    .hotName {
+        color: rgba($color: #fff, $alpha: .8);
+        font-size: .18rem;
+        margin-left: .1rem;
+        margin-bottom: .1rem;
+    }
+
+    .hotContent {
+        display: flex;
+
+        .hotContentLeft {
+            width: calc(calc(100vw - .6rem) / 2);
+            height: calc(calc(calc(100vw - .6rem) / 2) - .1rem);
+            border-radius: .2rem;
+            display: inline-block;
+            padding-right: .1rem;
+            position: relative;
+            overflow: hidden;
+            font-size: .16rem;
+            color: rgba($color: #fff, $alpha: .6);
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: .2rem;
+                display: inline-block;
+            }
+
+            &::before {
+                position: absolute;
+                bottom: 0;
+                // left: .1rem;
+                display: inline-block;
+                height: .5rem;
+                width: calc(100% - .1rem);
+                border-radius: 0 0 .2rem 0;
+                background: linear-gradient(to top, rgba($color: #000, $alpha: .6), transparent);
+                content: '家燕百科';
+                padding-top: .2rem;
+                padding-left: .1rem;
+            }
+        }
+
+        .hotContentRight {
+            width: calc(calc(100vw - .6rem) / 2);
+            height: calc(calc(100vw - .6rem) / 2);
+            display: flex;
+            padding-left: .1rem;
+            flex-direction: column;
+
+            div {
+                width: 100%;
+                border-radius: .15rem;
+                height: calc(calc(calc(calc(100vw - .6rem) / 2) / 2) - .1rem);
+                position: relative;
+                font-size: .16rem;
+                color: rgba($color: #fff, $alpha: .6);
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    border-radius: .15rem;
+                }
+
+                &:nth-child(1) {
+                    margin-bottom: .05rem;
+
+                    &::before {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        content: '好友的巢';
+                        display: inline-block;
+                        height: .3rem;
+                        // width: calc(100% - .1rem);
+                        border-radius: 0 0 .15rem 0;
+                        background: linear-gradient(to top, rgba($color: #000, $alpha: .6), transparent);
+                        padding-top: .05rem;
+                        padding-left: .1rem;
+                    }
+                }
+
+                &:nth-child(2) {
+                    margin-top: .05rem;
+
+                    &::before {
+                        width: 100%;
+                        position: absolute;
+                        content: '附近的巢';
+                        bottom: 0;
+                        display: inline-block;
+                        height: .3rem;
+                        // width: calc(100% - .1rem);
+                        border-radius: 0 0 .15rem 0;
+                        background: linear-gradient(to top, rgba($color: #000, $alpha: .6), transparent);
+                        padding-top: .05rem;
+                        padding-left: .1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .circle {}
+
+    .circle-title {
+        margin: 0 0 .2rem .4rem;
+        color: rgba($color: #fff, $alpha: .8);
+        font-size: .18rem;
+        box-sizing: border-box;
+    }
+
+    .circle-content {
+        margin: 0 .15rem .4rem .15rem;
+        background-color: #fff;
+        border-radius: .1rem;
+        box-sizing: border-box;
+        padding: 0 .2rem;
+        padding-bottom: .1rem;
+
+        .content-title {
+            height: .6rem;
+            width: 100%;
+            font-size: .2rem;
+            display: flex;
+            align-items: center;
+            // padding: 0 .2rem;
+        }
+
+        .content-logo {
+            display: inline-block;
+            width: .4rem;
+            height: .4rem;
+            border-radius: 50%;
+
+        }
+
+        .content-info {
+            font-size: .16rem;
+            margin-left: .1rem;
+            flex: 1;
+
+            p {
+                &:nth-child(2) {
+                    color: rgba($color: #000, $alpha: .6);
+                }
+            }
+
+        }
+    }
+
+    .swallow-img {
+        margin-top: .05rem;
+        border-radius: .05rem;
+        height: 1.4rem;
+        position: relative;
+
+        img {
+            height: 1.4rem;
+            width: 100%;
+        }
+
+        &::before {
+            width: 100%;
+            position: absolute;
+            bottom: .05rem;
+            left: .05rem;
+            content: '家乡的燕巢';
+            display: inline-block;
+            color: rgba($color: #fff, $alpha: .6);
+            font-size: .2rem;
+        }
+    }
+
+    .circle-footer {
+        display: flex;
+        font-size: .18rem;
+        margin-top: .1rem;
+        align-items: center;
+        justify-content: space-between;
+        color: rgba($color: #000, $alpha: .6);
+
+        .circle-footer-left {
+            display: flex;
+            align-items: center;
+
+            svg {
+                font-size: .26rem;
+                margin-right: .1rem;
+            }
+        }
+
+        .circle-footer-right {
+            display: flex;
+            align-items: center;
+
+            svg {
+                font-size: .26rem;
+                margin-right: .05rem;
+            }
+
+            span {
+                margin-left: .05rem;
+            }
+        }
+    }
+}
