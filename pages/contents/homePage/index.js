@@ -13,7 +13,7 @@ export default function homePage() {
 					燕归巢 <span className={`${styles.spot}`}></span> 认养一个巢
 					<div className={`${styles.add}`}><AddOutline /></div>
 				</div>
-				<img className={`${styles.img}`} src={swallow.src} />
+				<img loading="lazy" className={`${styles.img}`} src={swallow.src} />
 				<div className={`${styles.table}`}>
 					<div className={`${styles.item}`}>
 						<img className={`${styles.iconImg}`} src={tem.src} />

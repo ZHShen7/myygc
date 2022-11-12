@@ -1,0 +1,71 @@
+.container {
+    .extraPart {
+        border-left: solid 1px #eeeeee;
+        padding-left: 12px;
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .eye {
+        padding: 4px;
+        cursor: pointer;
+
+        svg {
+            display: block;
+            font-size: var(--adm-font-size-7);
+        }
+    }
+
+    .header {
+        height: 15vh;
+        position: relative;
+        margin-bottom: 10vh;
+
+        .loginText {
+            font-size: .3rem;
+            position: absolute;
+            left: 5vw;
+            top: 10vh;
+        }
+
+        .registerText {
+            font-size: .13rem;
+            position: absolute;
+            right: 5vw;
+            top: 11vh;
+        }
+    }
+
+    .myinput {
+        width: 90vw;
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        border-bottom: .01rem solid rgba(168, 162, 162, 0.77);
+        ;
+        margin: 0.1rem auto;
+
+        .input {
+            --font-size: .15rem;
+
+            ::-webkit-input-placeholder {
+                color: rgba(168, 162, 162, 0.77);
+            }
+        }
+
+        .eye {
+            left: .1rem;
+            cursor: pointer;
+
+            svg {
+                display: block;
+                font-size: .15rem;
+            }
+        }
+    }
+
+    .button {
+        width: 90vw;
+        margin: 5vh auto;
+    }
+}

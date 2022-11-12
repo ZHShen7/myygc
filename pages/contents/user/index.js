@@ -2,14 +2,18 @@ import Layout from "../../../components/layout"
 import swallow from '/public/images/swallow.jpg'
 import { ScanningOutline, RightOutline, CalendarOutline, StarOutline, FileOutline, MailOutline } from 'antd-mobile-icons'
 import styles from './user.module.scss'
+import { useRouter } from 'next/router'
+
 
 export default function user() {
+	const router = useRouter()
+	const { username } = router.query;
 	return (
 		<Layout>
-			<div className={`com-layout-container ${styles.user}`}>
+			<div className={`com-layout-container ${styles.user}`}>				
 				<div className={styles['user-title']}>燕归巢 <ScanningOutline /></div>
-				<div className={styles['user-portrait']}><img src={swallow.src} /></div>
-				<div className={styles['user-name']}> 家燕守护的小夏  <RightOutline /></div>
+				<div className={styles['user-portrait']}><img loading="lazy" src={swallow.src} /></div>
+				<div className={styles['user-name']}> {username}  <RightOutline /></div>
 				<div className={styles['user-relevant']}>
 					<div className={`${styles['user-relevant-g']} ${styles['user-relevant-item']}`}>
 						<p>关注</p>
