@@ -1,5 +1,5 @@
 name: Cypress Tests
-runname:
+run-name: cypress test
 on:
   push:
     branches: [ main ]
