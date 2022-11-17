@@ -9,8 +9,10 @@ jobs:
       - name: Installing Dependencies
         run: npm install
       # 运行代码扫描
-      - name: dev start
-        run: npm run dev
+      - name: build
+        run: npm run build
+      - name: start
+        run: npm start
       # 运行自动化测试
       - name: Running Test
         run: npm run test:e2e:CI
