@@ -1,5 +1,5 @@
-name: Node.js CI
-
+name: jest-test
+run-name: jest-test
 on: [push]
 
 jobs:
@@ -18,8 +18,3 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm test
-    
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
