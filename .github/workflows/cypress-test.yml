@@ -1,14 +1,12 @@
-name: Cypress tests
+name: With server
 on: [push]
 jobs:
   cypress-run:
-    name: Cypress run
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          config: pageLoadTimeout=100000,baseUrl=http://localhost:3000
+          start: npm start
