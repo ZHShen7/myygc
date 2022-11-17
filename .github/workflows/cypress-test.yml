@@ -3,11 +3,11 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
+    container:
+      image: cypress/browsers:node12.16.1-chrome80-ff73
+      options: --user 1001
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          build: npm run build
-          start: npm start
+        run: npx cypress run
