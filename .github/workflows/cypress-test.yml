@@ -3,11 +3,11 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
-  steps:
-  - name: Checkout 🛎
-    uses: actions/checkout@v2
+    steps:
+    - name: Checkout 🛎
+      uses: actions/checkout@v2
 
-  - name: Custom tests 🧪
-    uses: cypress-io/github-action@v4
-    with:
-      command: npm run test:e2e:CI
+    - name: Custom tests 🧪
+      uses: cypress-io/github-action@v4
+      with:
+        command: npm run test:e2e:CI
