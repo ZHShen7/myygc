@@ -1,4 +1,4 @@
-import Layout from "../../../components/layout"
+import Layout from "../../../components/Layout.js"
 import { AddOutline, SearchOutline, TagOutline, HeartFill, MessageOutline } from 'antd-mobile-icons'
 import styles from './community.module.scss'
 import swallow1 from '/public/images/swallow1.jpeg'

@@ -1,4 +1,4 @@
-import Layout from '../../../components/layout'
+import Layout from '../../../components/Layout'
 import styles from './homePage.module.css'
 import { AddOutline } from 'antd-mobile-icons'
 import swallow from '../../../public/images/swallow.jpg'

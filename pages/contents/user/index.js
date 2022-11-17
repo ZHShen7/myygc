@@ -1,4 +1,4 @@
-import Layout from "../../../components/layout"
+import Layout from "../../../components/Layout"
 import swallow from '/public/images/swallow.jpg'
 import { ScanningOutline, RightOutline, CalendarOutline, StarOutline, FileOutline, MailOutline } from 'antd-mobile-icons'
 import styles from './user.module.scss'
