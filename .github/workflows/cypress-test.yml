@@ -9,4 +9,6 @@ jobs:
     - name: Custom tests 🧪
       uses: cypress-io/github-action@v4
       with:
-        spec: cypress/e2e/spec.cy.js
+        start: npm start
+        wait-on: 'http://localhost:3000'
+        command: npm run test:e2e:CI
