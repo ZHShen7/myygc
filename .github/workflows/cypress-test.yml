@@ -26,5 +26,5 @@ jobs:
         wait-on: 'http://localhost:3000'
         config-file: ./cypress.config.js
       env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_RECORD_KEY: '2f497a4e-bd95-4c37-8817-deac998d37cf'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
