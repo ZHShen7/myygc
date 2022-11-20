@@ -7,8 +7,8 @@ module.exports = defineConfig({
       
     },
     // baseUrl: "http://localhost:3000",
-    // supportFile: "test/cypress/support/e2e.{js,jsx,ts,tsx}",
-    // specPattern: "test/cypress/e2e/**/*.cy.{js,jsx,ts,tsx}"
+    supportFile: "test/cypress/support/e2e.{js,jsx,ts,tsx}",
+    specPattern: "test/cypress/e2e/**/*.cy.{js,jsx,ts,tsx}"
   },
   // fixturesFolder: "test/cypress/fixtures",
   // videosFolder: "test/cypress/videos",
