@@ -17,4 +17,4 @@ jobs:
         build: npm run build
         start: npm start
         wait-on: 'http://localhost:3000'
-        command: npm run test:e2e:CI
+        config-file: ./cypress.config.js
