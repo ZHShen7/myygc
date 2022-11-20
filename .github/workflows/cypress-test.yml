@@ -4,6 +4,9 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
+    container:
+      image: cypress/browsers:node12.16.1-chrome80-ff73
+      options: --user 1001
     steps:
     - name: Checkout 🛎
       uses: actions/checkout@v3
@@ -17,4 +20,5 @@ jobs:
         build: npm run build
         start: npm start
         wait-on: 'http://localhost:3000'
+        browser: firefox
         command: npm run test:e2e:CI
