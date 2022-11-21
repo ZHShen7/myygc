@@ -4,10 +4,6 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
-    strategy:
-      fail-fast: false
-      matrix:
-        containers: [1, 2, 3]
     steps:
     - name: Checkout 🛎
       uses: actions/checkout@v3
@@ -18,15 +14,8 @@ jobs:
     - name: Custom tests 🧪
       uses: cypress-io/github-action@v4
       with:
-        record: false
-        parallel: true
-        group: 'Actions example'
-        build: npm run build
         start: npm run dev
         browser: chrome
         wait-on: 'http://localhost:3000'
         config-file: ./cypress.config.js
         command: npm run test:e2e:CI
-      env:
-          CYPRESS_RECORD_KEY: '2f497a4e-bd95-4c37-8817-deac998d37cf'
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
