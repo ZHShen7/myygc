@@ -1,19 +1,33 @@
 import Layout from "../../../components/Layout"
+import Link from "next/link"
 import swallow from '/public/images/swallow.jpg'
-import { ScanningOutline, RightOutline, CalendarOutline, StarOutline, FileOutline, MailOutline } from 'antd-mobile-icons'
+import { ScanningOutline, RightOutline, CalendarOutline, StarOutline, FileOutline, MailOutline, SetOutline } from 'antd-mobile-icons'
 import styles from './user.module.scss'
-import { useRouter } from 'next/router'
+import { useRouter} from 'next/router'
+import { useEffect,useState } from "react"
+
 
 
 export default function user() {
-	const router = useRouter()
-	const { username } = router.query;
+	const [username,setUsername] = useState('')
+	useEffect(() => {
+		setUsername(localStorage.getItem('user'))
+	}, []);
+
 	return (
 		<Layout>
-			<div className={`com-layout-container ${styles.user}`}>				
+			<div className={`com-layout-container ${styles.user}`}>
 				<div className={styles['user-title']}>燕归巢 <ScanningOutline /></div>
 				<div className={styles['user-portrait']}><img loading="lazy" src={swallow.src} /></div>
-				<div className={styles['user-name']}> {username}  <RightOutline /></div>
+				{
+					(username) ? (<div className={styles['user-name']}> {username} </div>) :
+						(<Link href="/contents/login" className={styles.link}>
+							<div className={styles['user-name']}>
+								<p style={{ color: 'purple' }}>未登录，点此登录</p>
+							</div>
+						</Link>)
+				}
+
 				<div className={styles['user-relevant']}>
 					<div className={`${styles['user-relevant-g']} ${styles['user-relevant-item']}`}>
 						<p>关注</p>
@@ -54,6 +68,13 @@ export default function user() {
 						<div className={styles['user-operation-left']}>
 							<MailOutline />
 							<span>邀请</span>
+						</div>
+						<RightOutline className={styles['user-operation-left']} />
+					</div>
+					<div className={styles['user-operation-item']}>
+						<div className={styles['user-operation-left']}>
+							<SetOutline />
+							<span>设置</span>
 						</div>
 						<RightOutline className={styles['user-operation-left']} />
 					</div>

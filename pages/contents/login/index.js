@@ -11,7 +11,8 @@ export default function Login() {
         socket.emit('login', values, (res) => {
             if (res.response === '1') {
                 console.log('登录成功');
-                Router.push({pathname:'/contents/user',query:{username:res.username}})
+                localStorage.setItem('user', res.username)
+                Router.push({ pathname: '/contents/user', query: { username: res.username } })
             }
             if (res.response === '2') {
                 alert('不存在该用户名！请重新填写');
@@ -20,12 +21,16 @@ export default function Login() {
                 alert('密码错误')
             }
         })
-
     };
+
+    const onBack = () => {
+        Router.push({ pathname: '/contents/user' })
+    }
     return (
         <div className={styles.container}>
             <header className={styles.header}>
                 <div className={styles.box}>
+
                     <p className={styles.loginText}>账号登录</p>
                     <a href='/contents/register' className={styles.registerText}>没有账号？点击注册一个</a>
                 </div>
@@ -38,9 +43,15 @@ export default function Login() {
                 }}
                 onFinish={onFinish}
                 footer={
-                    <Button block type='submit' color='success' size='large'>
-                        登录
-                    </Button>
+                    <div>
+                        <Button className={styles.btn} block type='submit' color='success' size='large'>
+                            登录
+                        </Button>
+
+                        <Button className={styles.btn} block onClick={onBack} color='primary' size='large'>
+                            返回
+                        </Button>
+                    </div>
                 }
             >
                 <Form.Item label='用户名' name='username'>

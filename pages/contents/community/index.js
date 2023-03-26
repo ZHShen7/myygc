@@ -15,7 +15,7 @@ export default function community() {
                     <input placeholder="请输入搜索内容" />
                 </div>
                 <div className={`${styles.hot}`}>
-                    <p className={`${styles.hotName}`}>热门推</p>
+                    <p className={`${styles.hotName}`}>热门推荐</p>
                     <div className={`${styles.hotContent}`} >
                         <div className={`${styles.hotContentLeft}`} >
                             <img loading="lazy" src={swallow1.src} />

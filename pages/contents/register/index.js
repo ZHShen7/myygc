@@ -1,5 +1,6 @@
 import { Form, Input, Button } from 'antd-mobile'
 import socket from '../../../models/socket';
+import Router from 'next/router';
 
 export default function Register() {
     const onFinish = (values) => {
@@ -7,6 +8,9 @@ export default function Register() {
         socket.emit('register', values, (res) => {
             if (res.response === '1') {
                 console.log('注册成功');
+                setTimeout(() => {
+                    Router.push({pathname:'/contents/login'})
+                }, 500);
             }
         });
     };

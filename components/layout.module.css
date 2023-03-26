@@ -1,6 +1,7 @@
 .container{
     height: 88vh;
     width: 100vw;
-    background-color: rgb(57,157,85);
+    /* background-color: rgb(57,157,85); */
+    background: linear-gradient(rgb(57,157,85), rgb(248, 249, 249) 90%);
     overflow: scroll;
 }

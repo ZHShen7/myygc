@@ -34,7 +34,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: rgba($color: #fff, $alpha: .8);
+        color: black;
         padding-top: .1rem;
         padding-bottom: .3rem;
 
@@ -87,7 +87,7 @@
             margin-bottom: .2rem;
 
             .user-operation-left {
-                color: rgba($color: #fff, $alpha: .8);
+                color: rgba($color: black, $alpha: .8);
 
                 span {
                     margin-left: .2rem;
