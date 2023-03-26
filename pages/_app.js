@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
+
 	const setHtmlFontSize = () => {
 		const htmlWidth =
 			document.documentElement.clientWidth || document.body.clientWidth;

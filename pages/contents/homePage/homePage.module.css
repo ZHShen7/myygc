@@ -53,6 +53,7 @@
     /* height: 3.22rem; */
     border-radius: .1rem;
     margin-bottom: .25rem;
+    
 }
 
 .iconImg {
@@ -63,6 +64,11 @@
     margin-right: .2rem;
 }
 
+.locicon{
+    margin-right: 0.2rem;
+    text-align: center;
+}
+
 .table {
     font-size: .16rem;
     display: flex;
@@ -71,7 +77,7 @@
 }
 
 .table .item {
-    flex: 0 0 47%;
+    flex: 0 0 48%;
     height: .6rem;
     display: flex;
     align-items: center;
@@ -79,8 +85,23 @@
     background-color: #fff;
     border-radius: .1rem;
     color: #666;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
 }
-
+.table .item1 {
+    flex:79%;
+    height: .6rem;
+    display: grid;
+    grid-template-columns: 3fr 6fr 2fr;
+    text-align: left;
+    align-items: center;
+    background-color: #fff;
+    border-radius: .1rem;
+    color: #666;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+}
+.table .item1 .loc{
+    text-align: center;
+}
 .table .item:first-child {
     margin-bottom: .28rem;
 }
